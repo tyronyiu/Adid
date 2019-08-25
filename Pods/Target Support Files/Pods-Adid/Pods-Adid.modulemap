@@ -1,0 +1,6 @@
+framework module Pods_Adid {
+  umbrella header "Pods-Adid-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,57 @@
+
+App Thinning Size Report for All Variants of Connect
+
+Variant: Connect-55B8F9DF-80B3-472A-B819-7EF77B113CDB.ipa
+Supported variant descriptors: [device: iPhone9,1, os-version: 12.2], [device: iPhone10,4, os-version: 12.2], [device: iPhone9,3, os-version: 12.2], and [device: iPhone10,1, os-version: 12.2]
+App + On Demand Resources size: 130 KB compressed, 323 KB uncompressed
+App size: 130 KB compressed, 323 KB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Connect-6D529520-5C37-4EF4-B3D5-C1722E3AA35B.ipa
+Supported variant descriptors: [device: iPhone8,4, os-version: 12.2], [device: iPod9,1, os-version: 12.2], [device: iPhone8,1, os-version: 12.2], [device: iPhone6,2, os-version: 12.2], [device: iPod7,1, os-version: 12.2], [device: iPhone7,2, os-version: 12.2], and [device: iPhone6,1, os-version: 12.2]
+App + On Demand Resources size: 130 KB compressed, 323 KB uncompressed
+App size: 130 KB compressed, 323 KB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Connect-7313E7B9-040F-4A76-B8BB-9BD6E4E126D0.ipa
+Supported variant descriptors: [device: iPad4,8, os-version: 12.2], [device: iPad6,8, os-version: 12.2], [device: iPad6,12, os-version: 12.2], [device: iPad7,5, os-version: 12.2], [device: iPad4,6, os-version: 12.2], [device: iPad4,2, os-version: 12.2], [device: iPad4,7, os-version: 12.2], [device: iPad4,9, os-version: 12.2], [device: iPad5,1, os-version: 12.2], [device: iPad6,11, os-version: 12.2], [device: iPad5,3, os-version: 12.2], [device: iPad4,1, os-version: 12.2], [device: iPad4,5, os-version: 12.2], [device: iPad5,4, os-version: 12.2], [device: iPad7,6, os-version: 12.2], [device: iPad4,4, os-version: 12.2], [device: iPad6,7, os-version: 12.2], [device: iPad5,2, os-version: 12.2], and [device: iPad4,3, os-version: 12.2]
+App + On Demand Resources size: 130 KB compressed, 323 KB uncompressed
+App size: 130 KB compressed, 323 KB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Connect-84283246-36E8-4B88-9060-205EDD825B9E.ipa
+Supported variant descriptors: [device: iPhone10,3, os-version: 12.2], [device: iPhone10,6, os-version: 12.2], [device: iPhone9,2, os-version: 12.2], [device: iPhone10,2, os-version: 12.2], [device: iPhone10,5, os-version: 12.2], [device: iPhone11,4, os-version: 12.2], [device: iPhone11,6, os-version: 12.2], [device: iPhone11,2, os-version: 12.2], and [device: iPhone9,4, os-version: 12.2]
+App + On Demand Resources size: 132 KB compressed, 326 KB uncompressed
+App size: 132 KB compressed, 326 KB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Connect-BEDEDA3E-8A4F-40B2-9780-7EABD36A4451.ipa
+Supported variant descriptors: [device: iPhone11,8, os-version: 12.2]
+App + On Demand Resources size: 133 KB compressed, 326 KB uncompressed
+App size: 133 KB compressed, 326 KB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Connect-C0F4EE86-3645-4C9E-9281-18403C108768.ipa
+Supported variant descriptors: [device: iPhone7,1, os-version: 12.2] and [device: iPhone8,2, os-version: 12.2]
+App + On Demand Resources size: 132 KB compressed, 326 KB uncompressed
+App size: 132 KB compressed, 326 KB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Connect-C97D92FE-F307-427F-9997-BCD270A282C3.ipa
+Supported variant descriptors: [device: iPad6,4, os-version: 12.2], [device: iPad7,4, os-version: 12.2], [device: iPad8,7, os-version: 12.2], [device: iPad11,2, os-version: 12.2], [device: iPad8,2, os-version: 12.2], [device: iPad8,1, os-version: 12.2], [device: iPad11,3, os-version: 12.2], [device: iPad8,4, os-version: 12.2], [device: iPad11,1, os-version: 12.2], [device: iPad8,3, os-version: 12.2], [device: iPad8,5, os-version: 12.2], [device: iPad8,8, os-version: 12.2], [device: iPad7,2, os-version: 12.2], [device: iPad6,3, os-version: 12.2], [device: iPad7,3, os-version: 12.2], [device: iPad11,4, os-version: 12.2], [device: iPad7,1, os-version: 12.2], and [device: iPad8,6, os-version: 12.2]
+App + On Demand Resources size: 130 KB compressed, 323 KB uncompressed
+App size: 130 KB compressed, 323 KB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
+
+
+Variant: Connect.ipa
+Supported variant descriptors: Universal
+App + On Demand Resources size: 165 KB compressed, 369 KB uncompressed
+App size: 165 KB compressed, 369 KB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed

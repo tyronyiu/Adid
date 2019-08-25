@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Connect.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>AA690166FEFC7E431AD139F68E742A016464BF6C</string>
+				<key>dateExpires</key>
+				<string>07.08.20</string>
+				<key>type</key>
+				<string>iOS Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>NA7S4CXJZ2.apov.Connect-</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>NA7S4CXJZ2</string>
+				<key>get-task-allow</key>
+				<true/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>NA7S4CXJZ2.apov.Connect-</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>Connect.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>927a4530-d383-47c5-b7b0-97fa4c107253</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: apov.Connect-</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>NA7S4CXJZ2</string>
+				<key>name</key>
+				<string>Ty Yiu</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
