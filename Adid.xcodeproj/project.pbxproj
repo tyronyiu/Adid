@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		35058D1D2311E3BA00A55957 /* formViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35058D1C2311E3BA00A55957 /* formViewController.swift */; };
+		35058D1F2312A85B00A55957 /* createQR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35058D1E2312A85B00A55957 /* createQR.swift */; };
+		35058D212312A89900A55957 /* makeVCARDRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35058D202312A89900A55957 /* makeVCARDRequest.swift */; };
+		35058D242312AAAD00A55957 /* makeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35058D232312AAAD00A55957 /* makeRequest.swift */; };
+		35058D272312AAE800A55957 /* deleteAllData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35058D262312AAE800A55957 /* deleteAllData.swift */; };
+		35058D292312AC0600A55957 /* pushView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35058D282312AC0600A55957 /* pushView.swift */; };
+		35058D2B2312AFDA00A55957 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35058D2A2312AFDA00A55957 /* UIScrollViewExtension.swift */; };
+		35058D2E2312B0F000A55957 /* createData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35058D2D2312B0F000A55957 /* createData.swift */; };
+		35058D302312B3EE00A55957 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35058D2F2312B3EE00A55957 /* UIButtonExtension.swift */; };
 		3546372A22FC4E7F0042F33F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546372922FC4E7F0042F33F /* AppDelegate.swift */; };
 		3546372C22FC4E7F0042F33F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3546372B22FC4E7F0042F33F /* ViewController.swift */; };
 		3546373422FC4E820042F33F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3546373322FC4E820042F33F /* Assets.xcassets */; };
@@ -44,6 +52,14 @@
 /* Begin PBXFileReference section */
 		1D1912E94B37C0473A56F778 /* Pods-AdidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdidTests.release.xcconfig"; path = "Target Support Files/Pods-AdidTests/Pods-AdidTests.release.xcconfig"; sourceTree = "<group>"; };
 		35058D1C2311E3BA00A55957 /* formViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = formViewController.swift; sourceTree = "<group>"; };
+		35058D1E2312A85B00A55957 /* createQR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createQR.swift; sourceTree = "<group>"; };
+		35058D202312A89900A55957 /* makeVCARDRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeVCARDRequest.swift; sourceTree = "<group>"; };
+		35058D232312AAAD00A55957 /* makeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeRequest.swift; sourceTree = "<group>"; };
+		35058D262312AAE800A55957 /* deleteAllData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteAllData.swift; sourceTree = "<group>"; };
+		35058D282312AC0600A55957 /* pushView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pushView.swift; sourceTree = "<group>"; };
+		35058D2A2312AFDA00A55957 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		35058D2D2312B0F000A55957 /* createData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createData.swift; sourceTree = "<group>"; };
+		35058D2F2312B3EE00A55957 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		3546372622FC4E7F0042F33F /* Adid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Adid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3546372922FC4E7F0042F33F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3546372B22FC4E7F0042F33F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +115,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35058D222312AA6D00A55957 /* functions */ = {
+			isa = PBXGroup;
+			children = (
+				35058D202312A89900A55957 /* makeVCARDRequest.swift */,
+				35058D2D2312B0F000A55957 /* createData.swift */,
+				35058D282312AC0600A55957 /* pushView.swift */,
+				35058D232312AAAD00A55957 /* makeRequest.swift */,
+				35058D262312AAE800A55957 /* deleteAllData.swift */,
+				35058D1E2312A85B00A55957 /* createQR.swift */,
+			);
+			path = functions;
+			sourceTree = "<group>";
+		};
+		35058D252312AAC400A55957 /* unused */ = {
+			isa = PBXGroup;
+			children = (
+				3561236322FC5E5E00C7C857 /* inputDetailsViewController.swift */,
+				35058D1C2311E3BA00A55957 /* formViewController.swift */,
+			);
+			path = unused;
+			sourceTree = "<group>";
+		};
+		35058D2C2312AFEA00A55957 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				35058D2A2312AFDA00A55957 /* UIScrollViewExtension.swift */,
+				35058D2F2312B3EE00A55957 /* UIButtonExtension.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		3546371D22FC4E7F0042F33F = {
 			isa = PBXGroup;
 			children = (
@@ -126,15 +173,16 @@
 			children = (
 				3546372922FC4E7F0042F33F /* AppDelegate.swift */,
 				3546372B22FC4E7F0042F33F /* ViewController.swift */,
+				35058D2C2312AFEA00A55957 /* extensions */,
+				35058D222312AA6D00A55957 /* functions */,
 				3546375A22FC50BE0042F33F /* welcomeViewController.swift */,
-				3561236322FC5E5E00C7C857 /* inputDetailsViewController.swift */,
-				3573B8112311A47B00FB0BE1 /* ContactDetailsData.xcdatamodeld */,
 				358E388022FCAF7F0046C5C3 /* inputViewController.swift */,
-				35058D1C2311E3BA00A55957 /* formViewController.swift */,
+				3573B8112311A47B00FB0BE1 /* ContactDetailsData.xcdatamodeld */,
 				3546372D22FC4E7F0042F33F /* Main.storyboard */,
 				3546373322FC4E820042F33F /* Assets.xcassets */,
 				3546373522FC4E820042F33F /* LaunchScreen.storyboard */,
 				3546373822FC4E820042F33F /* Info.plist */,
+				35058D252312AAC400A55957 /* unused */,
 			);
 			path = Adid;
 			sourceTree = "<group>";
@@ -401,11 +449,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35058D302312B3EE00A55957 /* UIButtonExtension.swift in Sources */,
+				35058D1F2312A85B00A55957 /* createQR.swift in Sources */,
+				35058D272312AAE800A55957 /* deleteAllData.swift in Sources */,
+				35058D212312A89900A55957 /* makeVCARDRequest.swift in Sources */,
 				3546372C22FC4E7F0042F33F /* ViewController.swift in Sources */,
+				35058D292312AC0600A55957 /* pushView.swift in Sources */,
 				3573B8132311A47B00FB0BE1 /* ContactDetailsData.xcdatamodeld in Sources */,
 				3561236422FC5E5E00C7C857 /* inputDetailsViewController.swift in Sources */,
+				35058D2E2312B0F000A55957 /* createData.swift in Sources */,
+				35058D242312AAAD00A55957 /* makeRequest.swift in Sources */,
 				3546375B22FC50BE0042F33F /* welcomeViewController.swift in Sources */,
 				35058D1D2311E3BA00A55957 /* formViewController.swift in Sources */,
+				35058D2B2312AFDA00A55957 /* UIScrollViewExtension.swift in Sources */,
 				3546372A22FC4E7F0042F33F /* AppDelegate.swift in Sources */,
 				358E388122FCAF7F0046C5C3 /* inputViewController.swift in Sources */,
 			);

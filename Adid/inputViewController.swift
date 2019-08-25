@@ -14,89 +14,22 @@ import CoreData
 let button = UIButton(frame: .zero)
 let headerView = UIView()
 let titleLabel = UILabel()
-//let descLabel = UILabel()
-//let scrollView = UIScrollView()
-
+let margins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 0)
 
 class inputViewController: FormViewController {
     
-    func DeleteAllData(){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let DelAllReqVar = NSBatchDeleteRequest(fetchRequest: NSFetchRequest<NSFetchRequestResult>(entityName: "UserContactDetails"))
-        do {
-            try managedContext.execute(DelAllReqVar)
-        }
-        catch {
-            print(error)
-        }
-    }
-
     
     @objc func buttonAction(sender: UIButton!) {
-        
         DeleteAllData()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "UserContactDetails", in: context)
-        let newUser = NSManagedObject(entity: entity!, insertInto: context)
-        
-//        print("Button tapped")
-//        let row: NameRow? = form.rowBy(tag: "firstname")
-//        let value = row?.value
-//        print(value!)
-        let valuesDictionary = form.values()
-//        print(valuesDictionary.keys)
-        for entry in valuesDictionary{
-            let value = entry.value
-            if value == nil {
-                newUser.setValue("", forKey: entry.key)
-            }
-//            else if value as! String == "" {
-//                context.delete(value as! NSManagedObject)
-//            }
-            else {
-               newUser.setValue(value!, forKey: entry.key)
-            }
-            
-            
-        }
-        do {
-            try context.save()
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "mainView") as! ViewController
-            self.present(newViewController, animated: true, completion: nil)
-        } catch {
-            print("Failed saving")
-        }
-        
+        var formValues = [String: Any]()
+        formValues = form.values() as [String : Any]
+        createData(formValues: formValues)
+        pushView(VC: self, name: "Main", identifier: "mainView")
     }
     
     
-    func makeRequest(Tag: String) -> String {
-        
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserContactDetails")
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserContactDetails")
-        //request.predicate = NSPredicate(format: "age = %@", "12")
-        request.returnsObjectsAsFaults = false
-        do {
-            let result = try context.fetch(request)
-            for data in result as! [NSManagedObject] {
-                if data.value(forKey: Tag) != nil {
-//                print(data.value(forKey: Tag))
-                return data.value(forKey: Tag) as! String
-            }
-                else {return ""}
-            }
-        } catch {
-            print("Failed")
-            return ""
-        }
-        return ""
-    }
     
-    let margins = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -110,9 +43,13 @@ class inputViewController: FormViewController {
         self.tableView.alpha = 0.0
         self.tableView?.separatorStyle = UITableViewCell.SeparatorStyle.none
         self.tableView.keyboardDismissMode = .onDrag
+        tableView.backgroundColor = UIColor.black
+        navigationOptions = RowNavigationOptions.Enabled.union(.StopDisabledRow)
+        // Enables smooth scrolling on navigation to off-screen rows
+        animateScroll = true
+        // Leaves 20pt of space between the keyboard and the highlighted row after scrolling to an off screen row
+        rowKeyboardSpacing = 20
 //        view.addSubview(self.tableView)
-        
-        
         
         titleLabel.frame = CGRect(x: 20, y: 0, width: headerView.bounds.width, height: (headerView.bounds.height))
         titleLabel.text = "Contact Details"
@@ -121,26 +58,8 @@ class inputViewController: FormViewController {
         titleLabel.font = UIFont.systemFont(ofSize: 38.0, weight: .heavy)
         titleLabel.backgroundColor = UIColor.black
         headerView.addSubview(titleLabel)
-//        descLabel.frame = CGRect(x: 20, y: (titleLabel.bounds.height - (headerView.bounds.height * 0.25 / 2)), width: (headerView.bounds.width * 0.8), height: (headerView.bounds.height * 0.25))
-//        descLabel.text = "These Contact Details will be used to create your ConnectCode"
-//        descLabel.numberOfLines = 0
-//        descLabel.alpha = 0.0
-//        descLabel.textColor = UIColor.lightGray
-//        descLabel.font = UIFont.systemFont(ofSize: 16.0, weight: .regular)
-//        headerView.addSubview(descLabel)
-        
         headerView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 200)
         view.addSubview(headerView)
-        
-        
-      
-        
-        
-        navigationOptions = RowNavigationOptions.Enabled.union(.StopDisabledRow)
-        // Enables smooth scrolling on navigation to off-screen rows
-        animateScroll = true
-        // Leaves 20pt of space between the keyboard and the highlighted row after scrolling to an off screen row
-        rowKeyboardSpacing = 20
         
         NameRow.defaultCellUpdate = { cell, row in
             cell.textField.textColor = .white
@@ -335,7 +254,7 @@ class inputViewController: FormViewController {
         
         
         
-        tableView.backgroundColor = UIColor.black
+        
         view.backgroundColor = UIColor.black
         
 //         let cellSpacingHeight: CGFloat = 50
@@ -374,9 +293,6 @@ class inputViewController: FormViewController {
             titleLabel.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 0),
             titleLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 0),
             titleLabel.widthAnchor.constraint(equalTo: headerView.widthAnchor, multiplier: 1),
-//            descLabel.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 0),
-//            descLabel.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 0),
-//            descLabel.widthAnchor.constraint(equalTo: headerView.widthAnchor, multiplier: 1)
             ])
        
     }
@@ -386,17 +302,14 @@ class inputViewController: FormViewController {
         UIView.animate(withDuration: 0.1, animations: {
             button.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
             titleLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-//            descLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
             self.tableView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         }, completion: { _ in
             UIView.animate(withDuration: 0.3) {
                 button.alpha = 1.0
                 titleLabel.alpha = 1.0
-//                descLabel.alpha = 1.0
                 self.tableView.alpha = 1.0
                 button.transform = CGAffineTransform(scaleX: 1, y: 1)
                 titleLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
-//                descLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
                 self.tableView.transform = CGAffineTransform(scaleX: 1, y: 1)
 //                button.transform = CGAffineTransform.identity
             }
@@ -408,7 +321,6 @@ class inputViewController: FormViewController {
         view.endEditing(true)
         super.touchesBegan(touches, with: event)
     }
-    var myheight = 0
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -424,74 +336,4 @@ class inputViewController: FormViewController {
 //        descLabel.alpha = 0.0
     }
    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-}
-
-
-
-extension UIButton {
-    
-    func pulsate() {
-        
-        let pulse = CASpringAnimation(keyPath: "transform.scale")
-        pulse.duration = 0.2
-        pulse.fromValue = 0.95
-        pulse.toValue = 1.0
-        pulse.autoreverses = true
-        pulse.repeatCount = 2
-        pulse.initialVelocity = 0.5
-        pulse.damping = 1.0
-        
-        layer.add(pulse, forKey: "pulse")
-    }
-    
-    func flash() {
-        
-        let flash = CABasicAnimation(keyPath: "opacity")
-        flash.duration = 0.2
-        flash.fromValue = 1
-        flash.toValue = 0.1
-        flash.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
-        flash.autoreverses = true
-        flash.repeatCount = 3
-        
-        layer.add(flash, forKey: nil)
-    }
-    
-    
-    func shake() {
-        
-        let shake = CABasicAnimation(keyPath: "position")
-        shake.duration = 0.05
-        shake.repeatCount = 2
-        shake.autoreverses = true
-        
-        let fromPoint = CGPoint(x: center.x - 5, y: center.y)
-        let fromValue = NSValue(cgPoint: fromPoint)
-        
-        let toPoint = CGPoint(x: center.x + 5, y: center.y)
-        let toValue = NSValue(cgPoint: toPoint)
-        
-        shake.fromValue = fromValue
-        shake.toValue = toValue
-        
-        layer.add(shake, forKey: "position")
-    }
 }
