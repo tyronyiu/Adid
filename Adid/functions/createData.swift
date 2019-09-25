@@ -9,27 +9,18 @@
 import Foundation
 import UIKit
 import CoreData
-
-func createData(formValues: Dictionary<String, Any>) {
+func createData(formValues: Dictionary<String, String>) {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let context = appDelegate.persistentContainer.viewContext
     let entity = NSEntityDescription.entity(forEntityName: "UserContactDetails", in: context)
     let newUser = NSManagedObject(entity: entity!, insertInto: context)
-for entry in formValues{
-    let value = entry.value
-    if value == nil {
-        newUser.setValue("", forKey: entry.key)
+    for entry in formValues{
+        newUser.setValue(entry.value, forKey: entry.key)
     }
-    else {
-        newUser.setValue(value, forKey: entry.key)
-    }
-}
-do {
-    try context.save()
-    //            push main View
-    
-} catch {
-    print("Failed saving")
-}
-    
+        do {
+            try context.save()
+            }
+        catch {
+                print("Failed saving")
+              }
 }

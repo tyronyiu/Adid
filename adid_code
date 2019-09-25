@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+FN;CHARSET=UTF-8:Adid App
+N;CHARSET=UTF-8:App;Adid;;;
+EMAIL;CHARSET=UTF-8;type=WORK,INTERNET:contact@apov-labs.com
+LOGO;ENCODING=b;TYPE=PNG:IMAGEDATA..
+ORG;CHARSET=UTF-8:Adid
+URL;CHARSET=UTF-8:Adid.apovlabs.com
+X-SOCIALPROFILE;type=instagram;x-user=adid_app:http://instagram.com/adid_app
+REV:2019-09-06T10:20:36.265Z
+END:VCARD

@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Ty Yiu
+N:Yiu;Ty;;;
+TEL;TYPE=CELL:+49 1712230998
+EMAIL;TYPE=HOME:Tyronyiu@gmail.com
+EMAIL;TYPE=WORK:yiu@apov-labs.com
+EMAIL;TYPE=UNI:Tyiu2017@student.hult.edu
+ADR;TYPE=HOME:;;25 Conquest Tower\, 130 Blackfriars Road\, SE1 8BZ London;;;;
+ORG:APOV
+X-SOCIALPROFILE;type=linkedin;x-user=:http://linkedin.com/
+X-SOCIALPROFILE;type=instagram;x-user=Tyronyiu:http://instagram.com/tyronyiu
+X-SOCIALPROFILE;type=snapchat;x-user=Tyyiu:http://snapchat.com/add/tyyiu
+END:VCARD

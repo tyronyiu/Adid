@@ -12,7 +12,9 @@ platform :ios, '9.0'
 use_frameworks!
 
 pod 'Eureka'
-
+pod 'WhatsNewKit'
+pod 'paper-onboarding'
+#pod 'EFQRCode', '~> 5.0.0'
 
   target 'AdidTests' do
     inherit! :search_paths

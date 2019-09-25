@@ -9,27 +9,24 @@
 import Foundation
 import CoreData
 import UIKit
-
 func makeRequest(Tag: String) -> String {
-    
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    //        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserContactDetails")
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserContactDetails")
-    //request.predicate = NSPredicate(format: "age = %@", "12")
     request.returnsObjectsAsFaults = false
     do {
         let result = try context.fetch(request)
         for data in result as! [NSManagedObject] {
             if data.value(forKey: Tag) != nil {
-                //                print(data.value(forKey: Tag))
                 return data.value(forKey: Tag) as! String
             }
-            else {return ""}
+            else {
+                return "A"
+            }
         }
-    } catch {
+    }
+    catch {
         print("Failed")
-        return ""
+        return "B"
     }
     return ""
 }
-
