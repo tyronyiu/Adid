@@ -40,7 +40,14 @@ class InputViewController: FormViewController, UITextFieldDelegate {
     @objc func buttonAction(sender: UIButton!) {
         showAlert()
         DeleteAllData()
-        let formValues = form.values()
+        var formValues = form.values()
+        for entry in formValues{
+            if entry.value == nil{
+                formValues[entry.key] = ""
+            }
+        }
+        print(formValues)
+        
         createData(formValues: formValues as! Dictionary<String, String>)
         let nc = NotificationCenter.default
         nc.post(name: Notification.Name("updateQR"), object: nil)
@@ -136,7 +143,7 @@ class InputViewController: FormViewController, UITextFieldDelegate {
                 $0.value = makeRequest(Tag: $0.tag!)
                 }.cellUpdate({ (cell, row) in
                 })
-            <<< EmailRow(){
+            <<< TextRow(){
                 $0.title = "Email"
                 $0.tag = "email"
                 $0.value = makeRequest(Tag: $0.tag!)
@@ -161,7 +168,7 @@ class InputViewController: FormViewController, UITextFieldDelegate {
                 $0.value = makeRequest(Tag: $0.tag!)
                 }.cellUpdate({ (cell, row) in
                 })
-            <<< EmailRow(){
+            <<< TextRow(){
                 $0.title = "Email"
                 $0.tag = "workEmail"
                 $0.value = makeRequest(Tag: $0.tag!)
@@ -242,9 +249,6 @@ class InputViewController: FormViewController, UITextFieldDelegate {
         ])
     }
     @objc func done() { // remove @objc for Swift 3
-        let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
-        impactFeedbackgenerator.prepare()
-        impactFeedbackgenerator.impactOccurred()
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }

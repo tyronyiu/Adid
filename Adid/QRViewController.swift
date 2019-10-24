@@ -77,9 +77,6 @@ class QRViewController: UIViewController {
                 self.QRimageView.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 self.infoLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }
-            let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
-            impactFeedbackgenerator.prepare()
-            impactFeedbackgenerator.impactOccurred()
         })
         whatsNewIfNeeded()
             }

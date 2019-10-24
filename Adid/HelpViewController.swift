@@ -69,9 +69,6 @@ class HelpViewController: UIViewController {
             self.view.addSubview(navBar)
      }
      @objc func done() { // remove @objc for Swift 3
-            let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .light)
-            impactFeedbackgenerator.prepare()
-            impactFeedbackgenerator.impactOccurred()
             navigationController?.popViewController(animated: true)
             dismiss(animated: true, completion: nil)
      }

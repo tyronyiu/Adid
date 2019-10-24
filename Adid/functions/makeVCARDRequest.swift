@@ -11,7 +11,7 @@ import UIKit
 import CoreData
 
 func makeVCARDRequest() -> String {
-    let AddedText = "item1.URL;type=Added:http://adid.apovlabs.com\nitem1.X-ABLabel:Contact created via Adid\n"
+    let AddedText = "item20.URL;type=Added:http://adid.apovlabs.com\nitem20.X-ABLabel:Contact created via Adid\n"
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: "UserContactDetails")
     request.returnsObjectsAsFaults = false
@@ -22,7 +22,7 @@ func makeVCARDRequest() -> String {
         return "X"
         }
         else {
-            print(result)
+//            print(result)
         VCardString = "BEGIN:VCARD\n"+"VERSION:4.0\n"
         }
         for data in result as! [NSManagedObject] {
@@ -91,7 +91,7 @@ func makeVCARDRequest() -> String {
             if data.value(forKey: "github") !=  nil {
                 if data.value(forKey: "github") as! String? != ""{
                     let github = data.value(forKey: "github" )
-                    VCardString = VCardString + "X-SOCIALPROFILE;type=github;x-user=\(github!):http://github.com/\(github!)\n"
+                    VCardString = VCardString + "X-SOCIALPROFILE;type=github;x-user=\(github!):https://github.com/\(github!)\n"
                 }
             }
             if data.value(forKey: "workWebsite") !=  nil {
